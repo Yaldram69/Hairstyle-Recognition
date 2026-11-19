@@ -58,6 +58,16 @@ python "web test.py"
 
 Input: webcam index 0. Press `q` to quit.
 
+## Roboflow API key
+
+The training notebook downloads its dataset from Roboflow. It reads your key from an environment variable, so the key is not stored in the repository:
+
+```bash
+set ROBOFLOW_API_KEY=your_key_here          # Windows (cmd)
+export ROBOFLOW_API_KEY=your_key_here       # macOS / Linux
+```n
+Get a key from your Roboflow account settings. Do not commit the key to the repository.
+
 ## Notes
 
 - The module-level `YOLO(...)` call in `web test.py` runs on import, so the model path there must be valid before the function is called.
